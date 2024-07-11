@@ -10,12 +10,12 @@ const App = () => {
   const [selectedCustomer, setSelectedCustomer] = useState(null);
 
   useEffect(() => {
-    axios.get('/api/data')
+    axios.get('https://customers-transactions.vercel.app/api/data')
       .then(response =>
         { 
           setCustomers(response.data?.customers)
         });
-    axios.get('/api/data')
+    axios.get('https://customers-transactions.vercel.app/api/data')
       .then(response => setTransactions(response.data?.transactions));
   }, []);
 
